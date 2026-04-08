@@ -205,7 +205,7 @@ def rows_to_df(rows, yearly=False):
     return pd.DataFrame(records)
 
 
-def style_df(df: pd.DataFrame) -> pd.io.formats.style.Styler:
+def style_df(df: pd.DataFrame):
     """Apply conditional formatting."""
     money_cols  = [c for c in df.columns if c not in ("Period", "Equity %")]
     pct_cols    = ["Equity %"]
